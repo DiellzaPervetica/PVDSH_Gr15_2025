@@ -2,7 +2,7 @@
 US Accidents (2016 - 2023)
 
 
-#  Analiza e te Dhenave – US Accidents Dataset
+#  Analiza e te dhenave – US Accidents Dataset
 
 ## Hyrje
 
@@ -10,14 +10,14 @@ Ky projekt paraqet nje analize te detajuar te datasetit US Accidents (2016–202
 Permes ketij procesi jane trajtuar vlerat e munguar, duplikimet, transformimi i tipeve te te dhenave, si dhe krijimi i vecorive te reja per analize te avancuar te faktoreve qe ndikojne ne ashpersine e aksidenteve.
 
 
-## Mbledhja dhe Pershkrimi i te Dhenave
+## Mbledhja dhe pershkrimi i te dhenave
 
 * Dataset-i eshte marre nga [Kaggle – US Accidents (Sobhan Moosavi)](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents).
 * Te dhenat perfshijne koordinatat gjeografike, kushtet e motit, koha e ndodhjes, vrazhdesia e aksidentit dhe shume karakteristika te tjera kontekstuale.
 * Pas importimit u perdor `pandas` per inspektim fillestar te formes (`df.shape`), tipeve te kolonave (`df.info()`) dhe vlerave qe mungojne (`df.isnull().sum()`).
 
 
-## Definimi i Tipeve te te Dhenave dhe Cilesia e tyre
+## Definimi i tipeve te te dhenave dhe cilesia e tyre
 
 * Kolonat `Start_Time` dhe `End_Time` u konvertuan ne tipe `datetime`.
 * U shtuan kolonat e zberthyera: `Start_Day`, `Start_Month`, `Start_Year`, `Start_Hour`, `End_Day`, etj., per lehtesi ne analize kohore.
@@ -25,9 +25,9 @@ Permes ketij procesi jane trajtuar vlerat e munguar, duplikimet, transformimi i 
 * Cilesia e te dhenave u vleresua permes identifikimit te simboleve jo te vlefshme (`?`, `-`, `NA`, etj.) dhe uniformizimit te formatimit tekstual.
 
 
-## Integrimi dhe Agregimi i te Dhenave
+## Integrimi dhe agregimi i te dhenave
 
-* Dataset-i u integrua me tabelen e datave te zberthyera per te formuar nje strukture te vetme (`df_merged`).
+* Dataseti u integrua me tabelen e datave te zberthyera per te formuar nje strukture te vetme (`df_merged`).
 * Jane kryer dy forma agregimi:
 
   * Sipas ores: numri dhe vrazhdesia mesatare e aksidenteve (`groupby('Start_Hour')`).
@@ -35,7 +35,7 @@ Permes ketij procesi jane trajtuar vlerat e munguar, duplikimet, transformimi i 
 * Rezultatet u eksportuan ne skedaret ndermjetes (`Week2_Dataset.csv`, `Week3_Dataset.csv`) per cdo faze te analizes.
 
 
-## Pastrimi i te Dhenave dhe Trajtimi i Vlerave te Munguar
+## Pastrimi i te dhenave dhe trajtimi i vlerave te munguar
 
 * Kolonat me me shume se 50% mungesa u eliminuan.
 * Vlerat munguar ne kolonat numerike u zevendesuan me medianen**, ndersa ne ato kategorike me moden.
@@ -45,7 +45,7 @@ Permes ketij procesi jane trajtuar vlerat e munguar, duplikimet, transformimi i 
   * Uniformizimi i formateve te dates ne te gjitha kolonat kohore.
 
 
-## Krijimi dhe Perzgjedhja e Vecorive 
+## Krijimi dhe perzgjedhja e vecorive 
 
 * Jane krijuar vecori te reja per analize kohore:
 
@@ -57,14 +57,14 @@ Permes ketij procesi jane trajtuar vlerat e munguar, duplikimet, transformimi i 
 * Perzgjedhja e kolonave relevante u be permes metodes `SelectKBest` me testin `f_classif` per atributet numerike.
 
 
-## Diskretizimi dhe Binarizimi
+## Diskretizimi dhe binarizimi
 
 * Per kolonat numerike me me shume se 4 vlera unike, u aplikua diskretizimi ne 4 intervale duke perdorur `KBinsDiscretizer` (strategjia quantile).
 * Kolona `Severity` u shnderrua ne nje variabel binare (`Severity_binary`), ku vlerat ≥3 u koduan si 1 (aksidente te renda).
 * Kolonat kategorike (`Sunrise_Sunset`, `Twilight`, `Season`, etj.) u binarizuan** permes `pd.get_dummies()` me `drop_first=True` per te shmangur multikollinearitetin.
 
 
-## Transformimi, Scaling dhe Normalizimi
+## Transformimi, scaling dhe normalizimi
 
 * Kolonat numerike u ndane ne tre grupe:
 
@@ -75,14 +75,14 @@ Permes ketij procesi jane trajtuar vlerat e munguar, duplikimet, transformimi i 
 * U eksportua dataseti final i transformuar (`Week4_transformed_final2.csv`).
 
 
-## Reduktimi i Dimensionit me PCA
+## Reduktimi i dimensionit me PCA
 
 * U aplikua Principal Component Analysis (PCA) pas standardizimit te te dhenave.
 * Varianca e shpjeguar totale ishte mbi 95%, duke reduktuar numrin e kolonave ne nje nensheshje me efikase per modelim.
 * Rezultatet u ruajten ne `Week4_PCA.csv` dhe u vizualizuan permes grafikut te variances per cdo komponent.
 
 
-## Rezultatet Kryesore te Pergatitjes
+## Rezultatet kryesore te pergatitjes
 
 * Dataseti fillestar: mbi 7 milion rreshta dhe 47+ kolona.
 * Pas pastrimit, diskretizimit dhe transformimeve: dataset kompakt dhe uniform per analiza te avancuara.
