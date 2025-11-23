@@ -1,0 +1,25 @@
+Disa linqe ne te cilat jemi duke lexuar lidhur me kerkesat e radhes per fazen e dyte:
+
+1. Detektimi i perjashtuesit
+  - Z-score
+    https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm
+  - Interquartile Range (IQR)
+    https://statistics.laerd.com/statistical-guides/outliers-in-boxplots.php
+  - Local Outlier Factor (LOF)
+    https://scikit-learn.org/stable/modules/outlier_detection.html#local-outlier-factor
+
+2. Menjanimi i zbulimeve jo te sakta
+  - Vleresimi i qendrueshmerise se modelit
+    https://scikit-learn.org/stable/modules/model_evaluation.html
+  - Strategjite per cross-validation
+    https://scikit-learn.org/stable/modules/cross_validation.html
+  - Trajtimi i te dhenave zhurmuese (noise data) dhe te etiketuara gabimisht (mislabeled)
+    https://machinelearningmastery.com/how-to-identify-and-correct-label-errors-in-machine-learning-datasets/
+
+3. Eksplorimi i te dhenave: statistika përmbledhëse, multivariante
+  - Statistikat pershkruese (mean, std, correlations)
+    https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
+  - Teknikat e vizualizimit per EDA
+    https://matplotlib.org/stable/users/explain/quick_start.html
+  - Analiza multivariante (pairplots, PCA)
+    https://scikit-learn.org/stable/modules/decomposition.html#pca
