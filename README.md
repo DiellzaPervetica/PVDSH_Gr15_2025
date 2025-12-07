@@ -543,27 +543,27 @@ Dataset-i ruhet si `Week4_transformed_final2.csv`, ku të gjitha kolonat janë n
 * Nxirren vetëm kolonat numerike;
 * Aplikohet **StandardScaler** përpara PCA;
 
-
- <img width="584" height="455" alt="image" src="https://github.com/user-attachments/assets/f3ef2264-cd87-432b-8d20-9dfdde84cdc0" />
+ <img width="207" height="35" alt="{6CEC4909-7C5F-4AF9-90D6-C604A11EA36A}" src="https://github.com/user-attachments/assets/8cc944f2-95af-4f16-a10b-7779f3a73070" />
 
 
 * Përdoret `PCA(n_components=0.95)` për të ruajtur **≥95% të variancës**;
 
 
- <img width="415" height="59" alt="{4C2A751E-BC47-4F6E-B30D-1F92F1C2163C}" src="https://github.com/user-attachments/assets/11279e51-793b-4340-bea8-18927d6e7296" />
+<img width="371" height="74" alt="image" src="https://github.com/user-attachments/assets/6a2d8504-8356-4f27-aad3-ebbee94b3e7d" />
+
 
 
 * Ruhet matrica e komponentëve në `Week4_PCA.csv`;
 
 
- <img width="419" height="103" alt="{3B909D11-27E2-4DA0-83A8-7DB9466C6079}" src="https://github.com/user-attachments/assets/13b10d8b-babc-46a5-8585-0d82f9d9e117" />
+ <img width="591" height="157" alt="image" src="https://github.com/user-attachments/assets/51fb8787-4725-4a8d-b8d6-7797e42687b7" />
 
 
 * Vizualizohet `explained_variance_ratio_` për të parë kontributin e secilit komponent.
 
 
- <img width="318" height="247" alt="{6FEDDE73-4713-4D2D-8CD1-B7F1318A47BC}" src="https://github.com/user-attachments/assets/4057b35c-3d94-40e1-ad40-4c7881cf63bc" />
-
+<img width="584" height="455" alt="image" src="https://github.com/user-attachments/assets/99093f63-c6b1-49b5-868f-2fbf2eec723d" />
+ 
 
 ---
 
@@ -764,12 +764,6 @@ venv\Scripts\activate
 ```
 
 ### 4. Instalimi i librarive
-
-```bash
-pip install -r requirements.txt
-```
-
-ose:
 
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn imbalanced-learn scipy
