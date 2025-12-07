@@ -225,11 +225,17 @@ Kjo mbështetet direkt në konceptet e **outlier detection** të trajtuara në l
 
 ### 1. Ngarkimi i të dhënave dhe kontrolli fillestar
 
-* Lezimi i `sampled_dataset.csv` me `pandas.read_csv`;
+* Leximi i `sampled_dataset.csv` me `pandas.read_csv`;
+  <img width="418" height="63" alt="{F595F214-85B3-404D-A972-A37C67EF2CC3}" src="https://github.com/user-attachments/assets/abd9df5b-7f75-4aba-9c72-91c5d562b708" />
+
 * `df.info()`, `df.shape`, `df.head()` për të inspektuar strukturën;
+  
 * `df.isnull().sum()` dhe llogaritja e numrit total të vlerave mungesë;
+  
 * Numërimi i placeholder-ve problematikë: `"?"`, `"-"`, `" "`, `"NA"`, `""`;
+  
 * Llogaritja e përqindjes së mungesave për kolonë dhe vizualizimi i tyre përmes një barplot-i.
+  
 
 **Qëllimi:** të identifikohen atributet me cilësi të dobët dhe kolonat që ndoshta duhen hequr ose trajtuar me kujdes shtesë.
 
