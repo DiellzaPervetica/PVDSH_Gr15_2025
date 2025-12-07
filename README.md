@@ -39,8 +39,7 @@ US Accidents (2016 - 2023)
 10. [Teknologjitë e Përdorura](#teknologjitë-e-përdorura)
 11. [Instalimi dhe Ekzekutimi i Projektit](#instalimi-dhe-ekzekutimi-i-projektit)
 12. [Rezultatet Kryesore dhe Vlerësimi](#rezultatet-kryesore-dhe-vlerësimi)
-13. [Kufizimet dhe Supozimet](#kufizimet-dhe-supozimet)
-14. [Punë e Ardhshme](#punë-e-ardhshme)
+
 
 ---
 
@@ -155,15 +154,6 @@ Këto karakteristika ndihmojnë në identifikimin e **pikeve kritike** (p.sh. kr
 
 * `Severity` – ashpërsia (shofër, dëme materiale, lëndime, fatalitet, etj.);
 * `Severity_binary` – variabël binar:
-
-[
-Severity_binary =
-\begin{cases}
-1, & \text{nëse } Severity \geq 3 \
-0, & \text{përndryshe}
-\end{cases}
-]
-
 * `Accident_Count_Last_Week` – numri i aksidenteve në 7 ditët e fundit për zonë;
 * `Accidents_Per_Day_Avg` – mesatarja ditore e aksidenteve për zonë ose në nivel global.
 
