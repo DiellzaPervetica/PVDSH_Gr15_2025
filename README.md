@@ -13,74 +13,16 @@ US Accidents (2016 - 2023)
       <p>Inxhinieri Kompjuterike dhe Softuerike - Programi Master</p>
       <p><strong>Projekti nga lënda:</strong> “Përgatitja dhe vizualizimi i të dhënave”</p>
       <p><strong>Profesor:</strong> PhD Mërgim Hoti</p>
-      <p><strong>Studentët (Gr. 13):</strong></p>
+      <p><strong>Studentët (Gr. 15):</strong></p>
       <ul>
-        <li>Fisnik Hazrolli</li>
-        <li>Altin Pajaziti</li>
-        <li>Olta Pllana</li>
-        <li>Rajmondë Shllaku</li>
+        <li>Adonis Xhemajili</li>
+        <li>Fjolla Gjikolli</li>
+        <li>Diellza Përvetica</li>
       </ul>
     </td>
   </tr>
 </table>
 
-
-# README -- Projekti i Përgatitjes dhe Vizualizimit të të Dhënave
-
-```{=html}
-<table>
-```
-```{=html}
-Expand
-message.txt
-6 KB
-# README -- Projekti i Përgatitjes, Detektimit të Anomalive dhe Vizualizimit të të Dhënave të Aksidenteve Rrugore
-
-(Në vijim do të vendosen të gjitha seksionet e plota --- për shkak të
-gjatësisë së dokumentit, kjo është vetëm struktura e skedarit. Më njofto
-dhe unë do ta mbush automatikisht me versionin final të plotë.)
-README (2).md
-1 KB
-Fjolla — 7:51 PM
-fjolla.gjikolli1@student.uni-pr.edu
-Diellza — 8:07 PM
-Po e rikonstruktoj gjithë dokumentimin në stil më akademik, duke ruajtur strukturën dhe duke e thelluar shpjegimin metodologjik. Ti pastaj mund ta kopjosh si `README.md` dhe ta plotësosh me foto / figura.
-
----
-
-### University Logo
-Expand
-message.txt
-29 KB
-Fjolla — 8:12 PM
-Më poshtë është një version më **profesional**, më **i strukturuar** dhe edhe më **i detajizuar** i README-së tënde, i harmonizuar me kodin që ke dërguar (pipeline-i real i implementuar në Python). Nëse do, ti mund ta kopjosh drejtpërdrejt si `README.md` në GitHub.
-
----
-
-### University Logo
-
-**Universiteti i Prishtinës**
-**Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike (FIEK)**
-
-**Programi:** Inxhinieri Kompjuterike dhe Softuerike – Studime Master
-**Lënda:** Përgatitja dhe vizualizimi i të dhënave
-**Profesor:** PhD Mërgim Hoti
-
----
-
-# Projekti
-
-## “Data Preparation, Anomaly Detection and Visualization on Road Accident Data”
-
-**Studentët (Gr. XX):**
-
-* Emri 1
-* Emri 2
-* Emri 3
-* Emri 4
-
-*(Të plotësohet sipas përbërjes së grupit.)*
-
 ---
 
 ## Përmbajtja
@@ -142,133 +84,9 @@ PVDH_GR_XX/
 │   ├── Week4_transformed_final.csv         # Pas scaling & normalizimit
 │   ├── Week4_transformed_final2.csv        # Pas encoding shtesë (one-hot / label encoding)
 │   ├── Week4_PCA.csv                       # Komponentët kryesorë nga PCA
-│   └── ...                                 # Dataset-e intermediate shtesë
-│
-├── notebooks_or_scripts/
-│   └── accident_preparation_pipeline.ipynb # Notebook kryesor me pipeline-in e implementuar
-│
-├── plots/
-│   ├── missing_values_barplot.png          # Barplot i vlerave mungesë
-│   ├── boxplots_iqr_before_after.png       # Boxplot PARA/PAS IQR
-│   ├── scatter_iqr_before_after.png        # Scatterplots PARA/PAS IQR (me flag outlier)
-│   ├── heatmap_corr_severity_binary.png    # Heatmap i korrelacioneve me Severity_binary
-│   ├── heatmap_corr_before_after_iqr.png   # Heatmap PARA/PAS IQR
-... (490 lines left)
-Collapse
-message.txt
-26 KB
-﻿
-Fjolla
-fjolla3355
- 
-Më poshtë është një version më **profesional**, më **i strukturuar** dhe edhe më **i detajizuar** i README-së tënde, i harmonizuar me kodin që ke dërguar (pipeline-i real i implementuar në Python). Nëse do, ti mund ta kopjosh drejtpërdrejt si `README.md` në GitHub.
-
----
-
-### University Logo
-
-**Universiteti i Prishtinës**
-**Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike (FIEK)**
-
-**Programi:** Inxhinieri Kompjuterike dhe Softuerike – Studime Master
-**Lënda:** Përgatitja dhe vizualizimi i të dhënave
-**Profesor:** PhD Mërgim Hoti
-
----
-
-# Projekti
-
-## “Data Preparation, Anomaly Detection and Visualization on Road Accident Data”
-
-**Studentët (Gr. XX):**
-
-* Emri 1
-* Emri 2
-* Emri 3
-* Emri 4
-
-*(Të plotësohet sipas përbërjes së grupit.)*
-
----
-
-## Përmbajtja
-
-1. [Përmbledhje e Projektit](#përmbledhje-e-projektit)
-2. [Struktura e Repository-t](#struktura-e-repository-t)
-3. [Përshkrimi i Dataset-it](#përshkrimi-i-dataset-it)
-4. [Pipeline-i End-to-End](#pipeline-i-end-to-end)
-5. [Teknikat e Zbatuara dhe Lidhja me Lëndën](#teknikat-e-zbatuara-dhe-lidhja-me-lëndën)
-6. [Përshkrimi i Detajuar i Hapeve](#përshkrimi-i-detajuar-i-hapeve)
-7. [Detektimi dhe Trajtimi i Anomalive / Outlier-ave](#detektimi-dhe-trajtimi-i-anomalive--outlier-ave)
-8. [Trajtimi i Pabalancimit të Klasave me SMOTE](#trajtimi-i-pabalancimit-të-klasave-me-smote)
-9. [Vizualizimet dhe Interpretimi i Rezultateve](#vizualizimet-dhe-interpretimi-i-rezultateve)
-10. [Teknologjitë e Përdorura](#teknologjitë-e-përdorura)
-11. [Instalimi dhe Ekzekutimi i Projektit](#instalimi-dhe-ekzekutimi-i-projektit)
-12. [Rezultatet Kryesore dhe Vlerësimi](#rezultatet-kryesore-dhe-vlerësimi)
-13. [Kufizimet dhe Supozimet](#kufizimet-dhe-supozimet)
-14. [Punë e Ardhshme](#punë-e-ardhshme)
-
----
-
-## Përmbledhje e Projektit
-
-Ky projekt implementon një **pipeline të plotë, modular dhe të ripërdorshëm** për përgatitjen e të dhënave mbi aksidentet rrugore, duke filluar nga të dhënat bruto (raw) deri te një dataset i strukturuar, i balancuar dhe i gatshëm për aplikimin e algoritmeve të mësimit makinerik.
-
-Theksi vendoset në:
-
-* **Pastrimin dhe integrimin e të dhënave** (mungesa, duplikate, vlera të parregullta, standardizim teksti);
-* **Inxhinierimin e karakteristikave (feature engineering)** me fokus në dimensionin kohor, gjeografik, meteorologjik dhe historik (risk i bazuar në frekuencë aksidentesh);
-* **Detektimin dhe trajtimin e anomalive / outlier-ave**, si në hapësirën origjinale, ashtu edhe në hapësirën e reduktuar të PCA-së;
-* **Scaling, normalizim dhe reduktim dimensionaliteti (PCA)** për të përmirësuar cilësinë e vizualizimeve dhe performancën e modeleve të mëvonshme;
-* **Trajtimin e pabalancimit të klasave** të target-it (`Severity_binary`) me **SMOTE**;
-* **Vizualizimin krahasues PARA/PAS** transformimeve të ndryshme për të vlerësuar ndikimin konkret të çdo faze.
-
-Rezultati final është një dataset i përgatitur profesionalisht, i përshtatshëm për **klasifikimin e ashpërsisë së aksidenteve** dhe për studime të mëtejshme mbi riskun dhe faktorët ndikues të aksidenteve.
-
-### Objektivat kryesore
-
-* Projektimi i një **pipeline-i të riprodhueshëm** që mund të aplikohet edhe në dataset-e të ngjashme;
-* Zbatimi i teknikave **statistike dhe bazuar në distancë** për detektimin dhe trajtimin e outlier-ave;
-* Ndërtimi i **karakteristikave të orientuara drejt riskut**, si frekuenca e aksidenteve në periudha të shkurtra dhe mesatare ditore;
-* Vlerësimi i ndikimit të **scaling, PCA dhe SMOTE** në hapësirën e të dhënave;
-* Dokumentimi i të gjithë procesit, me referencë të qartë ndaj koncepteve të lëndës “Përgatitja dhe vizualizimi i të dhënave”.
-
----
-
-## Struktura e Repository-t
-
-```text
-PVDH_GR_XX/
-│
-├── Datasets/
-│   ├── sampled_dataset.csv                 # Dataset-i fillestar (sample)
-│   ├── Week2_Dataset.csv                   # Pas shpërbërjes së datës në komponentë kohorë
-│   ├── Week3_Dataset.csv                   # Pas pastrimit fillestar & imputimit bazik
-│   ├── Week4_Dataset.csv                   # Pas feature engineering & diskretizimit fillestar
-│   ├── df_binarized.csv                    # Pas binarizimit dhe heqjes së kolonave tekstuale
-│   ├── df_transformed.csv                  # Versioni i ndërmjetëm pas disa transformimeve
-│   ├── Week4_transformed_final.csv         # Pas scaling & normalizimit
-│   ├── Week4_transformed_final2.csv        # Pas encoding shtesë (one-hot / label encoding)
-│   ├── Week4_PCA.csv                       # Komponentët kryesorë nga PCA
-│   └── ...                                 # Dataset-e intermediate shtesë
-│
-├── notebooks_or_scripts/
-│   └── accident_preparation_pipeline.ipynb # Notebook kryesor me pipeline-in e implementuar
-│
-├── plots/
-│   ├── missing_values_barplot.png          # Barplot i vlerave mungesë
-│   ├── boxplots_iqr_before_after.png       # Boxplot PARA/PAS IQR
-│   ├── scatter_iqr_before_after.png        # Scatterplots PARA/PAS IQR (me flag outlier)
-│   ├── heatmap_corr_severity_binary.png    # Heatmap i korrelacioneve me Severity_binary
-│   ├── heatmap_corr_before_after_iqr.png   # Heatmap PARA/PAS IQR
-│   └── pca_explained_variance.png          # Varianca e shpjeguar nga PCA
-│
 ├── README.md                               # Dokumentimi i projektit
-└── requirements.txt                        # Lista e librarive të nevojshme
+└── main.ipynb                              #Kodi i punimit
 ```
-
-Struktura është e organizuar sipas parimeve të **riprodhueshmërisë**, **trasparencës** dhe **modularitetit**, duke ndarë qartë të dhënat, kodin, vizualizimet dhe dokumentimin. 
-
 ---
 
 ## Përshkrimi i Dataset-it
@@ -664,7 +482,7 @@ Pipeline-i gjeneron vizualizime që ndihmojnë në:
 
 ```bash
 git clone <repo-url>
-cd PVDH_GR_XX
+cd PVDH_Gr15_2025
 ```
 
 ### 3. Virtual environment (rekomandohet)
@@ -721,14 +539,5 @@ pip install pandas numpy scikit-learn matplotlib seaborn imbalanced-learn scipy
   * IQR clamping në hapësirën origjinale (univariate, robust).
 
 * Është përdorur **SMOTE** për të balancuar klasat në `Severity_binary`, duke krijuar një bazë të fortë për ndërtimin e modeleve klasifikuese ku klasat e rralla janë kritike nga këndvështrimi i riskut.
-
----
-
-## Kufizimet dhe Supozimet
-
-* Supozohet që të dhënat e motit (`Weather_Timestamp`) janë të vlefshme në afërsi të kohës së aksidentit (`Start_Time`);
-* Përdorimi i pragut `Severity >= 3` për ndërtimin e `Severity_binary` është një zgjedhje e bazuar në interpretimin e ashpërsisë, por mund të ndryshohet;
-* I njëjti pipeline nuk merr parasysh aktualisht **aspektet hapësinore më të avancuara** (p.sh. clustering gjeografik, distanca midis aksidenteve);
-* Disa teknika të importuara (p.sh. `IsolationForest`) janë të planifikuara për përdorim, por jo të integruara plotësisht në versionin aktual të notebook-ut.
 
 ---
