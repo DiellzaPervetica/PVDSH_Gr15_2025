@@ -226,16 +226,24 @@ Kjo mbështetet direkt në konceptet e **outlier detection** të trajtuara në l
 ### 1. Ngarkimi i të dhënave dhe kontrolli fillestar
 
 * Leximi i `sampled_dataset.csv` me `pandas.read_csv`;
+  
   <img width="418" height="63" alt="{F595F214-85B3-404D-A972-A37C67EF2CC3}" src="https://github.com/user-attachments/assets/abd9df5b-7f75-4aba-9c72-91c5d562b708" />
 
 * `df.info()`, `df.shape`, `df.head()` për të inspektuar strukturën;
   
+<img width="436" height="362" alt="{B37AD6C0-A389-4A21-933E-4CC00DB9CF3A}" src="https://github.com/user-attachments/assets/6359c7d2-4014-4b13-9dc8-3f869a815b35" />
+  
 * `df.isnull().sum()` dhe llogaritja e numrit total të vlerave mungesë;
-  
+
+<img width="436" height="357" alt="{9B4FE55B-FC64-4A89-8C99-27ECAE66E67D}" src="https://github.com/user-attachments/assets/3a2f24b3-01d7-416d-bc5b-044d86d3603d" />
+
 * Numërimi i placeholder-ve problematikë: `"?"`, `"-"`, `" "`, `"NA"`, `""`;
-  
+
+<img width="435" height="100" alt="{D37F58EA-E9C8-4DA3-A647-C9DFA411FCDA}" src="https://github.com/user-attachments/assets/d4d06702-1462-492c-a13e-250701379b3a" />
+
 * Llogaritja e përqindjes së mungesave për kolonë dhe vizualizimi i tyre përmes një barplot-i.
-  
+
+<img width="438" height="373" alt="{5425DCDF-9CB4-4BB9-9ECE-5BF31828E402}" src="https://github.com/user-attachments/assets/4cd9b3c2-cdcc-4bde-bf24-9541a28b2c24" />
 
 **Qëllimi:** të identifikohen atributet me cilësi të dobët dhe kolonat që ndoshta duhen hequr ose trajtuar me kujdes shtesë.
 
@@ -244,9 +252,22 @@ Kjo mbështetet direkt në konceptet e **outlier detection** të trajtuara në l
 ### 2. Parsimi i datës dhe shpërbërja kohore
 
 * Konvertimi i `Start_Time` dhe `End_Time` në `datetime`;
+
+<img width="434" height="48" alt="{EA534C05-00A1-4040-AE53-D4655D52F6D7}" src="https://github.com/user-attachments/assets/ebb8abda-4d55-43f0-bde2-014d56d97759" />
+  
 * Ndërtimi i `date_details` me `Start_Day`, `Start_Month`, `Start_Year`, `Start_Hour`, `End_Day`, `End_Month`, `End_Year`, `End_Hour`;
+
+<img width="433" height="137" alt="{CAFF7002-37F9-4EA1-AB76-70ECDBDBACEF}" src="https://github.com/user-attachments/assets/9a896318-77a7-433e-96ee-0397145823a2" />
+
 * Ruajtja e `dates_exploded.csv` dhe pastaj merge me dataset-in kryesor (`df_merged`);
+
+<img width="432" height="38" alt="{E70E1A7E-1956-4A6D-9C47-755B0B78496C}" src="https://github.com/user-attachments/assets/2379c3e5-6f33-40cc-9277-062efe4d7438" />
+
+<img width="432" height="40" alt="{FD9C7A7D-6B92-4DB3-A881-45741F1D43C6}" src="https://github.com/user-attachments/assets/887acda8-eba0-46c6-89c3-f81247963f45" />
+
 * Riorganizimi i kolonave për një rend më logjik (kohor → metadata → të tjera).
+  
+<img width="434" height="98" alt="{911401FA-0939-4779-95FC-F383198A3A8F}" src="https://github.com/user-attachments/assets/5b3f1228-20a8-4f1b-bf66-5bc5c622a00a" />
 
 ---
 
@@ -259,10 +280,14 @@ Dy agregime kryesore:
    * `Accident_Count` – numri total i aksidenteve për çdo orë;
    * `Avg_Severity` – ashpërsia mesatare për orë.
 
+<img width="430" height="110" alt="{76425CA8-17A5-492A-B4BF-A0C819ED0694}" src="https://github.com/user-attachments/assets/e1389a17-56c1-4bc1-9135-9dd36e581979" />
+
 2. **Sipas `Weather_Condition`**:
 
    * `Accident_Count` – numri i aksidenteve për çdo gjendje moti;
    * `Avg_Severity` – ashpërsia mesatare për secilën kategori meteorologjike.
+
+<img width="436" height="113" alt="{695A1F88-0F57-4B9E-AA9C-5BE52C08890F}" src="https://github.com/user-attachments/assets/7dbab9f7-da2b-45e4-b225-04a4c6c04e74" />
 
 Këto rezultate mund të vizualizohen dhe interpretohen për të identifikuar:
 
@@ -274,8 +299,14 @@ Këto rezultate mund të vizualizohen dhe interpretohen për të identifikuar:
 ### 4. Heqja e kolonave me shumë mungesa dhe duplikateve
 
 * Përcaktohet një prag prej 50% mungesa për kolonë;
-* Kolonat që nuk e kalojnë këtë prag mbahen (`dropna(axis=1, thresh=threshold)`);
+* * Kolonat që nuk e kalojnë këtë prag mbahen (`dropna(axis=1, thresh=threshold)`);
+
+<img width="433" height="212" alt="{1DDCD82D-6C0E-4C35-BF62-56BF1BE760F2}" src="https://github.com/user-attachments/assets/416096be-ea4c-46c6-b5e7-ebc3bc7b9bc5" />
+
 * Identifikohen dhe hiqen rreshtat e duplikuar (`df_merged.drop_duplicates()`).
+
+<img width="421" height="91" alt="{F5F45FD8-5846-4AA9-87B0-6A5E918A76AA}" src="https://github.com/user-attachments/assets/ff929786-9e86-4b74-b2dd-8e519f09f079" />
+
 
 Kjo rrit integritetin e të dhënave dhe zvogëlon rrezikun e mbifitimit (overfitting) për modele të mëvonshme.
 
@@ -289,6 +320,9 @@ Kjo rrit integritetin e të dhënave dhe zvogëlon rrezikun e mbifitimit (overfi
 * Konvertim i `Weather_Timestamp` në `datetime`;
 * Zëvendësimi i vlerave si `Unknown`, `None`, `N/A`, `UNK` me `NaN`.
 
+<img width="432" height="284" alt="{2BF9477A-2DE5-4763-99E0-6631B4EC0EA7}" src="https://github.com/user-attachments/assets/4edbd491-83a6-4f63-ad84-ea70a1da7692" />
+
+
 Rezultati është një dataset më konsistent, ku vlerat semantikisht të barabarta nuk trajtohen si kategori të ndryshme për shkak të formatimit.
 
 ---
@@ -298,15 +332,42 @@ Rezultati është një dataset më konsistent, ku vlerat semantikisht të baraba
 #### 6.1. Vlerat numerike dhe kategoriale
 
 * Kolonat numerike: imputim me **medianë**, për të qenë robust ndaj outlier-ave;
+
+<img width="443" height="77" alt="{072E3C52-5D59-47D2-8EAB-F2E9DAA5AEC5}" src="https://github.com/user-attachments/assets/7d203923-9c71-4f9a-b298-db93af7de425" />
+
+<img width="433" height="133" alt="{6426A599-DAC2-44D6-BD64-4D544C7466FA}" src="https://github.com/user-attachments/assets/32fb827e-1106-4931-bba2-eeea5092e047" />
+
 * Kolonat kategoriale: imputim me **modën** (vlera më e shpeshtë);
+
+<img width="425" height="71" alt="{FFCB6A71-7A86-4A0A-B6B1-C23ED86EB3EA}" src="https://github.com/user-attachments/assets/56b59943-26ff-4e71-aecb-93ff2463343a" />
+
+<img width="437" height="160" alt="{D30D56D1-6D42-49B8-965E-0D78F4AD7EA0}" src="https://github.com/user-attachments/assets/d9d2712e-9174-45f0-bd4f-3b022265a7df" />
+
 * Raportimi i kolonave ku është kryer imputimi dhe numri i mungesave pas këtij procesi.
+
+<img width="420" height="39" alt="{242FD4D6-E76A-4925-AF77-904195B61DD3}" src="https://github.com/user-attachments/assets/d699891b-d082-48a1-8a07-0cabf0915861" />
+
+<img width="438" height="15" alt="{450A57D0-22B1-4529-B0A9-8C834036D93F}" src="https://github.com/user-attachments/assets/f9046736-996f-4126-ae63-7f3f17fde816" />
 
 #### 6.2. Vlerat kohore
 
 * Llogaritja e **kohezgjatjes mesatare** së ngjarjeve (`End_Time - Start_Time`);
+
+<img width="421" height="89" alt="{FC9CC96F-85E5-4F7D-83D8-0041CF759B3E}" src="https://github.com/user-attachments/assets/7977d207-0915-4105-bf50-f3074bebfbc3" />
+
 * Plotësimi i `End_Time` nga `Start_Time` (dhe anasjelltas) kur njëra mungon;
+
+<img width="426" height="64" alt="{DA4ADF31-91C9-4FE2-BDE0-8C3C5BC58EA3}" src="https://github.com/user-attachments/assets/41f4f093-a803-42eb-a09c-8defb726067b" />
+
 * Plotësimi i `Weather_Timestamp` me `Start_Time`, duke supozuar matje meteorologjike afër kohës së aksidentit;
+
+<img width="420" height="22" alt="{CAB1EE67-11DA-442F-8007-B70090A60DD2}" src="https://github.com/user-attachments/assets/fa87b511-57d8-45de-830d-3a3f25e6eba6" />
+
 * Për çdo mbetje mungesash kohore, përdoret përsëri **mediana** e datave.
+
+<img width="425" height="85" alt="{F79620CF-9EE8-4528-A509-26B6730EA8B5}" src="https://github.com/user-attachments/assets/310876e8-1e81-4165-bdc3-cac33c2cdc38" />
+
+<img width="432" height="54" alt="{5BFFBF19-BDF6-4826-9AD1-FDF935BC08EF}" src="https://github.com/user-attachments/assets/2cc360c9-be0e-4499-a03c-7f40c610258d" />
 
 Kjo siguron **koherencë temporale** dhe redukton humbjen e rreshtave për shkak të mungesave kohore.
 
@@ -317,6 +378,7 @@ Kjo siguron **koherencë temporale** dhe redukton humbjen e rreshtave për shkak
 #### 7.1. Detektimi dinamik i kolonave
 
 Përdoret një hartë (`col_map_lower`) për të gjetur kolonat e rëndësishme edhe kur emrat e tyre ndryshojnë pak (p.sh. `start_time`, `StartTime`, `occurred_on_date`). Kjo e bën pipeline-in:
+<img width="429" height="291" alt="{67702E16-6022-444C-94E5-63E10EA552B7}" src="https://github.com/user-attachments/assets/7c466408-47cb-44d9-a9b6-13cf86e967fe" />
 
 * më **gjenerik**,
 * më **i transferueshëm** mes dataset-esh të ndryshme.
@@ -324,15 +386,31 @@ Përdoret një hartë (`col_map_lower`) për të gjetur kolonat e rëndësishme 
 #### 7.2. Veti meteorologjike
 
 * `Temperature` (numerike);
-* `Precipitation_raw` dhe `Rain`;
+
+<img width="426" height="30" alt="{5DE1350E-778F-4FAC-99D8-9F9BB8EB6735}" src="https://github.com/user-attachments/assets/5a0b6213-bc9a-4721-bfa1-211906617c48" />
+
+* `Precipitation_raw` dhe `Rain`;]
+
+<img width="433" height="70" alt="image" src="https://github.com/user-attachments/assets/5a2797e2-d9fc-4b90-8f36-7f515d5f0932" />
+
 * `Visibility` – unifikimi i `Visibility(mi)` në një kolonë numerike standarde.
+
+<img width="423" height="28" alt="{78B0C205-3D87-41C9-858F-7316B0FBAE53}" src="https://github.com/user-attachments/assets/0c7cac90-9d47-4187-a870-af03d60a12d4" />
 
 #### 7.3. Veti kohore
 
 Nga `Start_Time`:
 
+<img width="422" height="64" alt="{94972373-A09B-4F6C-9280-BA136460CD25}" src="https://github.com/user-attachments/assets/784a42d3-bce9-4973-868a-27136331c706" />
+
 * `Hour`, `Day`, `Month`, `Weekday`, `Is_Weekend`;
+
+<img width="438" height="55" alt="{75043318-0292-4467-9381-5C9E27C97B81}" src="https://github.com/user-attachments/assets/9bc4276f-edff-475e-b3f0-62a90525ff8f" />
+
 * `Season` (Winter, Spring, Summer, Fall).
+
+<img width="425" height="87" alt="{E7552E9F-1D6F-4784-A37C-16D175459B62}" src="https://github.com/user-attachments/assets/0d8920e7-df05-495f-a3f6-287aa5fa363c" />
+
 
 #### 7.4. Veti historike të aksidenteve
 
@@ -341,6 +419,10 @@ Në varësi të një **location key** (`City`, `State`, `Zipcode`, etj.):
 * `daily_count` – numri i aksidenteve në ditë për zonë;
 * `Accident_Count_Last_Week` – shuma lëvizëse 7-ditore e aksidenteve për zonë;
 * `Accidents_Per_Day_Avg` – mesatarja ditore e aksidenteve për zonë.
+
+<img width="905" height="414" alt="{28949133-7FA3-4E91-93E9-431CF2B64168}" src="https://github.com/user-attachments/assets/1850b1cb-c22d-4be8-8f07-8afc31923d78" />
+<img width="898" height="116" alt="image" src="https://github.com/user-attachments/assets/f2b271ab-7310-4418-9c2e-e619bb136771" />
+
 
 Në mungesë të një location key, llogaritjet bëhen në **nivel global**.
 
