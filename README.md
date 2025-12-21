@@ -39,7 +39,7 @@ US Accidents (2016 - 2023)
 10. [Teknologjitë e Përdorura](#teknologjitë-e-përdorura)
 11. [Instalimi dhe Ekzekutimi i Projektit](#instalimi-dhe-ekzekutimi-i-projektit)
 12. [Rezultatet Kryesore dhe Vlerësimi](#rezultatet-kryesore-dhe-vlerësimi)
-13. [Vizualizimet me Streamlit](# Vizualizimet me Streamlit)
+13. [Vizualizimet me Streamlit](#Vizualizimet-me-streamlit)
 
 
 ---
