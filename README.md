@@ -85,6 +85,7 @@ PVDH_GR15/
 │   ├── Week4_transformed_final2.csv        # Pas encoding shtesë (one-hot / label encoding)
 │   ├── Week4_PCA.csv                       # Komponentët kryesorë nga PCA
 ├── README.md                               # Dokumentimi i projektit
+├── app.py                                  # Vizualizimet me streamlit
 └── main.ipynb                              #Kodi i punimit
 ```
 ---
