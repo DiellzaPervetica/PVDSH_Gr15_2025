@@ -39,6 +39,7 @@ US Accidents (2016 - 2023)
 10. [Teknologjitë e Përdorura](#teknologjitë-e-përdorura)
 11. [Instalimi dhe Ekzekutimi i Projektit](#instalimi-dhe-ekzekutimi-i-projektit)
 12. [Rezultatet Kryesore dhe Vlerësimi](#rezultatet-kryesore-dhe-vlerësimi)
+13. [Vizualizimet me Streamlit](# Vizualizimet me Streamlit)
 
 
 ---
@@ -71,7 +72,7 @@ Rezultati final është një dataset i përgatitur profesionalisht, i përshtats
 ## Struktura e Repository-t
 
 ```text
-PVDH_GR_XX/
+PVDH_GR15/
 │
 ├── Datasets/
 │   ├── sampled_dataset.csv                 # Dataset-i fillestar (sample)
@@ -705,6 +706,60 @@ Pipeline-i gjeneron vizualizime që ndihmojnë në:
 
  <img width="1697" height="734" alt="image" src="https://github.com/user-attachments/assets/36330ccc-4333-40a8-9b77-d81cf3e4c87d" />
 
+---
+
+## Vizualizimet me Streamlit
+
+ * Overview;
+   
+    <img width="1905" height="881" alt="image" src="https://github.com/user-attachments/assets/32024999-6fc0-4988-a04e-498945c982c7" />
+
+ * KPI Dashboard;
+   
+   <img width="959" height="440" alt="{7FD75E01-0530-4B34-8B94-88A0E251A7B2}" src="https://github.com/user-attachments/assets/07202953-4a6d-4e47-a732-2fe953d14b77" />
+
+ * Risk Profile;
+
+   <img width="953" height="443" alt="{0EA740ED-D397-4120-AC0C-E4730EF4080E}" src="https://github.com/user-attachments/assets/e3ee8f75-f309-4c32-8ddd-70def1e318d7" />
+   
+  <img width="958" height="446" alt="{029007E8-A488-459F-AF85-DABE9C4E2730}" src="https://github.com/user-attachments/assets/9acf20c1-9362-4248-9190-d177b04f8005" />
+
+  <img width="955" height="371" alt="{CB85949D-23D9-4A65-A2B5-E1EC46E1BB57}" src="https://github.com/user-attachments/assets/fac5140d-ebc7-4add-9e1e-e843c6f93510" />
+
+  <img width="953" height="442" alt="{2769429E-3EEE-4D5C-82F6-64E024073DEC}" src="https://github.com/user-attachments/assets/094687ad-9901-4254-b1d5-385a823e7b2a" />
+
+ * US States Map;
+
+   <img width="957" height="441" alt="{DA59F800-7F7E-4B75-96FD-A3AE3294F6F6}" src="https://github.com/user-attachments/assets/829af353-8034-4fc9-9ecf-508ea718fe76" />
+
+  <img width="957" height="442" alt="{D04F880F-0C6E-4A76-AC65-49827DD39050}" src="https://github.com/user-attachments/assets/d94fa322-bd74-4672-861a-4b787e3a7a5f" />
+
+ * Severity & Correlations;
+
+   <img width="954" height="446" alt="{27039D6B-007B-4DE1-AD38-0900D087020B}" src="https://github.com/user-attachments/assets/0bc2feef-a8d4-4774-b6d4-58412cc3ce81" />
+
+ * PCA Impact;
+
+   <img width="959" height="444" alt="{F95ED5BD-93D8-4037-A34E-D750557D5C30}" src="https://github.com/user-attachments/assets/35da9beb-d71b-4bfd-b9a2-8ed90d6244ad" />
+
+ * Comparison: Dataset Overview;
+
+   <img width="958" height="443" alt="{EC758F9C-97BD-4914-A4DC-71AFEF3C6C0C}" src="https://github.com/user-attachments/assets/6666da55-d3ad-4ce7-b9d8-00eb108d672b" />
+
+ * Comparison: Missing Values;
+
+   <img width="957" height="444" alt="{19CC7749-33FF-429D-B15F-279C70AADAB2}" src="https://github.com/user-attachments/assets/07e6d189-9f7d-424f-bc51-6b256688bb03" />
+
+ * Comparison: Distributions
+
+   <img width="960" height="442" alt="{C30A80A8-4479-4110-B0CF-9B2BF58F27E8}" src="https://github.com/user-attachments/assets/e6a0c3cc-d102-4845-b24d-1f494b3036e2" />
+
+ * Comparison: Outliers
+
+   <img width="960" height="441" alt="{25E43C55-A9BC-4B4E-853C-D0A66BF6BE57}" src="https://github.com/user-attachments/assets/b7f878fe-ab1e-42e2-a945-fa0d22956d86" />
+
+
+---
 
 ---
 
@@ -764,7 +819,7 @@ pip install pandas numpy scikit-learn matplotlib seaborn imbalanced-learn scipy
 * Hap `notebooks_or_scripts/accident_preparation_pipeline.ipynb`;
 * Ekzekuto cell-at në rend;
 * Dataset-et intermediate krijohen automatikisht në `Datasets/`;
-* Vizualizimet mund të ruhen në `plots/`.
+* Vizualizimet mund të ekzekutohen nga `app.py`;
 
 ---
 
